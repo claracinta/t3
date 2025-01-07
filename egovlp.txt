@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Resmi Pemerintah Kabupaten Lembata">
+    <meta name="author" content="Pemerintah Kabupaten Lembata">
+    <title>eGov Lembata</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Resetting default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, #005f73, #0a9396);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header .logo img {
+            max-width: 120px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+        }
+
+        header nav ul li a:hover {
+            color: #ffb703;
+            transition: color 0.3s ease-in-out;
+        }
+
+        /* Banner Section */
+        #banner {
+            background: url('images/banner.jpg') no-repeat center center/cover;
+            height: 60vh;
+            position: relative;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #banner .banner-text {
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        #banner h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        #banner p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Services Section */
+        #services {
+            padding: 60px 40px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        #services h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #005f73;
+        }
+
+        .service-item {
+            display: inline-block;
+            width: 30%;
+            margin: 20px 10px;
+            background-color: #f0f4f8;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-item h3 {
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+            color: #005f73;
+        }
+
+        .service-item p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* About Section */
+        #about {
+            background-color: #0a9396;
+            padding: 60px 40px;
+            color: white;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        #about p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #003d5b;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer .social-media {
+            margin-top: 20px;
+        }
+
+        footer .social-media a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.3rem;
+        }
+
+        footer .social-media a:hover {
+            color: #ffb703;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-item {
+                width: 80%;
+                margin: 20px auto;
+            }
+
+            #banner h1 {
+                font-size: 2.5rem;
+            }
+
+            #banner p {
+                font-size: 1.25rem;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Lembata">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#services">Layanan</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="banner-text">
+            <h1>Selamat Datang di Portal eGov Lembata</h1>
+            <p>Layanan Digital Pemerintah Kabupaten Lembata untuk Masyarakat.</p>
+        </div>
+    </section>
+
+    <!-- Section Layanan -->
+    <section id="services">
+        <h2>Layanan Kami</h2>
+        <div class="service-item">
+            <h3>Pendaftaran Akta Kelahiran</h3>
+            <p>Proses pendaftaran akta kelahiran dapat dilakukan secara online di portal ini.</p>
+        </div>
+        <div class="service-item">
+            <h3>Izin Usaha</h3>
+            <p>Ajukan izin usaha secara praktis melalui layanan online ini.</p>
+        </div>
+        <div class="service-item">
+            <h3>Pendaftaran KTP Elektronik</h3>
+            <p>Permudah pengurusan KTP elektronik tanpa harus mengantri.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Tentang eGov Lembata</h2>
+        <p>eGov Lembata adalah portal layanan digital yang disediakan oleh Pemerintah Kabupaten Lembata untuk mempermudah masyarakat dalam mengakses berbagai layanan publik secara online. Melalui portal ini, masyarakat dapat mengajukan berbagai permohonan, mendapatkan informasi, serta berinteraksi dengan pemerintah secara efisien.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Pemerintah Kabupaten Lembata</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
