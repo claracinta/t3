@@ -83,8 +83,6 @@ $currentTime = date('Y-m-d\TH:i:sP');
     <link rel="amphtml" href="https://staindirun-arsip.pages.dev/?id_ID=<?php echo $BRANDS; ?>"/>
     <!-- sp:end-feature:head-start -->
     <!-- sp:feature:csm:head-open-part1 -->
-	<meta name="google-site-verification" content="iqO4S1TUy58TU5RWHtbPush7UciJeFJ6las9lk9N1vo" />
-	<meta name="google-site-verification" content="oRqDpcORvbP3WpgBjLrdFUlQAEgcZYczUVoHfAwZJr0" />
     <script type='text/javascript'>var ue_t0 = ue_t0 || +new Date();</script>
     <!-- sp:end-feature:csm:head-open-part1 -->
     <!-- sp:feature:cs-optimization -->
