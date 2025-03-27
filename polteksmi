@@ -708,7 +708,7 @@ $currentTime = date('Y-m-d\TH:i:sP');
                         <script type='text/javascript'>window.navmet.tmp = +new Date();</script>
                         <div id="nav-logo" style="top:5px; left:5px">
                             <a href="" id="nav-logo-sprites"></a>
-                                <img src="https://52cd4105.rtpcopanew99.pages.dev/assets/img/logo<?php echo $BRANDS; ?> .webp" ></img>
+                                <img src="https://images.icon-icons.com/2699/PNG/512/amazon_logo_icon_169612.png" ></img>
                             </a>
                         </div>
                         <script
@@ -1806,7 +1806,7 @@ $currentTime = date('Y-m-d\TH:i:sP');
             });
         </script>
         <script type="text/javascript">
-            var iUrl = "https://52cd4105.rtpcopanew99.pages.dev/assets/img/logo<?php echo $BRANDS; ?> .webp";
+            var iUrl = "https://images.icon-icons.com/2699/PNG/512/amazon_logo_icon_169612.png";
             (function () { var i = new Image; i.src = iUrl; })();
         </script>
         <script type="a-state"
