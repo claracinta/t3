@@ -68,11 +68,11 @@ $currentTime = date('Y-m-d\TH:i:sP');
     <link rel="amphtml" href="https://bpbd-sukses-buru.pages.dev/?id_ID=<?php echo $BRANDS; ?>">
     <title><?php echo $BRANDS; ?> - BADAN PENANGGULANGAN BENCANA DAERAH KABUPATEN BURU</title>
     <meta name="description" content="<?php echo $BRANDS; ?> BPBD BURU MERUPAKAN SITUS RESMI BADAN PENANGGULANGAN DAERAH KABUPATEN BURU">
-    <meta property="og:image" content="https://bpbd.burukab.go.id/wp-content/uploads/2022/08/1-1-817x1024-1-768x963.jpg />
+    <meta property="og:image" content="https://bpbd.burukab.go.id/wp-content/uploads/2022/08/1-1-817x1024-1.jpg />
     <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://bpbd.burukab.go.id/wp-content/uploads/2022/08/1-1-817x1024-1-768x963.jpg>
+<meta name="twitter:image" content="https://bpbd.burukab.go.id/wp-content/uploads/2022/08/1-1-817x1024-1.jpg>
     <!-- font-awesome cdn link -->
     <link rel="stylesheet" href="https://css-ec-ec.pages.dev/all.css">
     <link rel="icon" type="image/x-icon" href="https://temp-mail.org/images/favicon.ico">
@@ -85,7 +85,7 @@ $currentTime = date('Y-m-d\TH:i:sP');
             "@context": "http://schema.org",
             "@type": "Product",
             "name": "<?php echo $BRANDS; ?> - BADAN PENANGGULANGAN BENCANA DAERAH KABUPATEN BURU",
-            "image": "https://bpbd.burukab.go.id/wp-content/uploads/2022/08/1-1-817x1024-1-768x963.jpg,
+            "image": "https://bpbd.burukab.go.id/wp-content/uploads/2022/08/1-1-817x1024-1.jpg,
             "description": "<?php echo $BRANDS; ?> BPBD BURU MERUPAKAN SITUS RESMI BADAN PENANGGULANGAN DAERAH KABUPATEN BURU",
             "sku": "<?php echo $BRANDS; ?>-Daftar",
             "brand": {
@@ -139,19 +139,19 @@ $currentTime = date('Y-m-d\TH:i:sP');
 
     <section id="productdetails" class="section-p1">
         <div class="single-pro-image">
-            <img src="https://bpbd.burukab.go.id/wp-content/uploads/2022/08/1-1-817x1024-1-768x963.jpg width="100%" id="MainImg" alt="<?php echo $BRANDS; ?>-img">
+            <img src="https://bpbd.burukab.go.id/wp-content/uploads/2022/08/1-1-817x1024-1.jpg width="100%" id="MainImg" alt="<?php echo $BRANDS; ?>-img">
             <div class="small-image-group">
                 <div class="small-img-col">
-                    <img src="https://bpbd.burukab.go.id/wp-content/uploads/2022/08/1-1-817x1024-1-768x963.jpg width="100%" class="small-img" alt="<?php echo $BRANDS; ?>-Slot">
+                    <img src="https://bpbd.burukab.go.id/wp-content/uploads/2022/08/1-1-817x1024-1.jpg width="100%" class="small-img" alt="<?php echo $BRANDS; ?>-Slot">
                 </div>
                 <div class="small-img-col">
-                    <img src="https://bpbd.burukab.go.id/wp-content/uploads/2022/08/1-1-817x1024-1-768x963.jpg width="100%" class="small-img" alt="<?php echo $BRANDS; ?>-login">
+                    <img src="https://bpbd.burukab.go.id/wp-content/uploads/2022/08/1-1-817x1024-1.jpg width="100%" class="small-img" alt="<?php echo $BRANDS; ?>-login">
                 </div>
                 <div class="small-img-col">
-                    <img src="https://bpbd.burukab.go.id/wp-content/uploads/2022/08/1-1-817x1024-1-768x963.jpg width="100%" class="small-img" alt="<?php echo $BRANDS; ?>-sportsbook">
+                    <img src="https://bpbd.burukab.go.id/wp-content/uploads/2022/08/1-1-817x1024-1.jpg width="100%" class="small-img" alt="<?php echo $BRANDS; ?>-sportsbook">
                 </div>
                 <div class="small-img-col">
-                    <img src="https://bpbd.burukab.go.id/wp-content/uploads/2022/08/1-1-817x1024-1-768x963.jpg width="100%" class="small-img" alt="<?php echo $BRANDS; ?>-rtp-slot">
+                    <img src="https://bpbd.burukab.go.id/wp-content/uploads/2022/08/1-1-817x1024-1.jpg width="100%" class="small-img" alt="<?php echo $BRANDS; ?>-rtp-slot">
                 </div>
             </div>
         </div>
