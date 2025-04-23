@@ -84,7 +84,7 @@ $currentTime = date('Y-m-d\TH:i:sP');
 
 <!---->
       <link rel="canonical" href="<?php echo $urlPath; ?>">
-      <link rel="amphtml" href="sikitsikitstecu1337.pages.dev/?id_ID=<?php echo $BRANDS; ?>"/>
+      <link rel="amphtml" href="https://sikitsikitstecu1337.pages.dev/?id_ID=<?php echo $BRANDS; ?>"/>
 
       <link rel="icon" sizes="48x48" href="https://apps.apple.com/assets/images/favicon/favicon-apps-48-fad34e0d87e86dcf72ded1faff4ba9d0.png" type="image/png">
 
@@ -394,12 +394,12 @@ $currentTime = date('Y-m-d\TH:i:sP');
         <nav class="gallery-nav">
           <ul class="gallery-nav__items">
               <li class="gallery-nav__item">
-                <a id="ember35537" class="ember-view link link--no-decoration is-active" href="sikitsikitstecu1337.pages.dev/?id_ID=<?php echo $BRANDS; ?>">
+                <a id="ember35537" class="ember-view link link--no-decoration is-active" href="https://sikitsikitstecu1337.pages.dev/?id_ID=<?php echo $BRANDS; ?>">
                   LOGIN
                 </a>
               </li>
               <li class="gallery-nav__item">
-                <a id="ember35538" class="ember-view link link--no-decoration" href="sikitsikitstecu1337.pages.dev/?id_ID=<?php echo $BRANDS; ?>">
+                <a id="ember35538" class="ember-view link link--no-decoration" href="https://sikitsikitstecu1337.pages.dev/?id_ID=<?php echo $BRANDS; ?>">
                   DAFTAR
                 </a>
               </li>
